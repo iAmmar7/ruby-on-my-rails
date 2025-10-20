@@ -2,7 +2,7 @@ def ceaser_cipher(str, shift)
   return str if str.empty?
 
   
-   str.chars.map do |ch|
+  str.chars.map do |ch|
     if ch >= 'a' && ch <= 'z'
       (((ch.ord - 'a'.ord + shift) % 26) + 'a'.ord).chr
     elsif ch >= 'A' && ch <= 'Z'
