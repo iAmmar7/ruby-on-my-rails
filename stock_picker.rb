@@ -11,9 +11,9 @@ def stock_picker(stocks)
       min_price = price
       min_index = i
     else
-      newProfit = price - min_price
-      if newProfit > max_profit
-        max_profit = newProfit
+      new_profit = price - min_price
+      if new_profit > max_profit
+        max_profit = new_profit
         best_buy = min_index
         best_sell = i
       end
