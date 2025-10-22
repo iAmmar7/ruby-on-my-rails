@@ -20,7 +20,7 @@ def stock_picker(stocks)
     end
   end
 
-  return [best_buy, best_sell]
+  [best_buy, best_sell]
 end
 
-puts stock_picker([17,3,6,9,15,8,6,1,10])
+puts stock_picker([17, 3, 6, 9, 15, 8, 6, 1, 10])

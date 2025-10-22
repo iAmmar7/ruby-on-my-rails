@@ -1,16 +1,15 @@
 def substrings(str, dictionary)
-  result = Hash.new
+  result = {}
   return result if str.empty?
 
-  for dict in dictionary
+  dictionary.each do |dict|
     dict = dict.downcase
-    if str.include?(dict)
-      result[dict] = result.fetch(dict, 0) + 1
-    end
+    result[dict] = result.fetch(dict, 0) + 1 if str.include?(dict)
   end
 
-  return result
+  result
 end
 
-dictionary = ["below","down","go","going","horn","how","GO","howdy","it","i","low","own","part","partner","sit"]
+dictionary = %w[below down go going horn how GO howdy it i low own part partner
+                sit]
 puts substrings('going', dictionary)
